@@ -1,0 +1,28 @@
+Class System
+
+First-Tier Classes
+	Squire
+
+Second-Tier Classes
+	Knight
+	Archer
+	Chemeist
+
+	Elemental Mage
+	Life Mage
+
+Third-Tier Classes
+	Element Knight
+	Life Knight
+
+	Ranger
+	Theif
+
+	Time Mage
+	Death Mage	
+
+Forth-Tier Classes
+	Time Kight
+	Death Knight
+
+	

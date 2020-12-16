@@ -1,0 +1,21 @@
+Magic System
+
+	Each character is assigned an element at the start and it cannot be changed. Charaters gain magic abilties by gaining experience in a magical class.
+
+	There are pure magic classes where characters learn the prime forms of the magic.
+
+	There are hybrid classes that translate magic learned in the pure magic classes that apply to their class ablities. This magic must first be learned form their pure magic class.
+
+Magic is broken down into 4 different catagories: 
+
+Elemental Magic
+	There are 3 types of elemental magic: Air, Fire, and Water. They effect eachother in a rock-paper-sissers style system. Air beats Water, Water beats Fire, and Fire beats Air. Elemental magic also incorproates some possible statis effects like poison, or petrify. 
+
+Healing Magic
+	There are 2 types of healing magic: Those that restore health and those that heal status effects.
+
+Time Magic
+	This magic can manipulate space-time. Examples being: Slow, Haste, Float, and Black Hole, and Rewind.
+
+Dark Magic
+	Those who use dark magic forsake their element and are vonerable to all elemental magic, but gain unique non-elemental destructive magic.

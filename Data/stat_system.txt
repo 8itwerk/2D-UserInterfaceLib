@@ -1,0 +1,44 @@
+Stat System
+
+Strength
+	Determines physical attack power
+
+
+
+
+
+
+
+
+
+Strength
+	Attack = Weapon + Strength + Status
+	Def = Armor + Strengh + Status
+Endurance
+	Health = Endurance * Constant
+Speed
+	Ready Time = Constant - Ready Time
+Sprit 
+	Magic Attack = Sprit + Accessory
+	Magic Def = Sprit + Accessory
+Move
+	Hoz. Range = Move + Accessory + Class
+Jump
+	Vert. Range = Jump + Accessory + Class
+
+
+-------------------------------------------------------------------------------
+
+
+
+
+Party Roster __________________________________________________________________
+
+  __ Character---+
+ | 
+ |  ########   Lanz
+ |  ########     Level         27
+ |  ########     HP...    348/348
+ |  ########     MP...      74/74
+ |  ########
+ |___________________________________________________________________________+
