@@ -3,10 +3,11 @@
 
 #include "canvas.h"
 #include "canvasdefs.h"
+
 using namespace std;
 
 // Remember how to do an init list?
-canvas::canvas(string initTitle, sf::IntRect &initLocation)
+canvas::canvas(string initTitle, sf::IntRect &initLocation) : element()
 {
   title = initTitle;
 
@@ -28,6 +29,8 @@ int canvas::move(int byX, int byY)
 {
   location.left += byX;
   location.top += byY;
+  
+	update();
 
   return 0;
 }
@@ -36,6 +39,8 @@ int canvas::put(int toX, int toY)
 {
   location.left += toX;
   location.top += toY;
+
+	update();
   
   return 0;
 }
@@ -44,6 +49,8 @@ int canvas::changeSize(int toX, int toY)
 {
   location.width = toX;
   location.height = toY;
+
+	update();
 
   return 0;
 }
@@ -248,3 +255,5 @@ int canvas::drawCorners(sf::RenderWindow & window, sf::Texture &ui_texture)
 
   return 0;
 }
+
+void canvas::display() {}

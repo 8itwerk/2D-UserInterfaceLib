@@ -14,11 +14,11 @@ class character
 		void copy_rstat(root_stats & to_copy) const;
 		void copy_bstat(battle_stats & to_copy) const;
 
-		int equip_item(int const slot, item const & to_equip);
-		int remove_item(int const slot);
+		int equip_item(const int slot, item const & to_equip);
+		int remove_item(const int slot);
 		//copy_items
-		int set_skill(int const slot, skill const & to_add);
-		int remove_skill(int const slot);
+		int set_skill(const int slot, skill const & to_add);
+		int remove_skill(const int slot);
 		//copy_skills
 
 		int displayBasic();

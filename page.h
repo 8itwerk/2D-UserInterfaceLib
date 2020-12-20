@@ -1,52 +1,36 @@
 // Tactics Game UI by Jeffrey Jerstrom
-// Page class for displaying basic info
-
-#include <iostream>
-#include <cstring>
-#include <string>
-#include "SFML/Graphics.hpp"
-
-// It is best if pages are created in multiples of tile sizes to save on calc time
-// Remainders are costly!
+// Page class 
 //
-// Use pagedefs.h to set sprite sheet locations
+// The page is a list of elements that displays them in a FIFO order. The
+// element class is a ABC to allow for different types of elements with one
+// interface for the page to use. The list cannot own the element objects unless
+// RTTI or any type flag is used which also prevents the client from deriving
+// their own elements. 
+//
+// This means that the client will have to manage the memory for the elements
+// they create. I have tried to avoid this situation, but have come up empty
+// handed. The client can ether:
+//	 1. Use dynamic memory and be trusted to delete it
+//   2. Use smart pointers
+//   3. Declare the elements as global variables
+//
+// I don't like any of those options, but until there is a better solution, we
+// are stuck with them. 
 
-class page
+#include "element.h"
+
+class page : public element
 {
-  public:
-    page(std::string initTitle, sf::IntRect &location);
+	public:
+		page();
+		~page();
+	  int addElement(element & toadd);
+		int removeElement(const char * name);
+    int displayPage();
+		
 
-    int move(int byX, int byY);
-    int put(int toX, int toY);
-    int changeSize(int toX, int toY);
+	private:
+		bool compare(const element & comp);
 
-    // This can save time by not calc on the fly, but is not enforced!
-    // There must be an update for every change.
-    void update();
-
-    int getLocation(sf::IntRect &toAdd);
-
-    int draw(sf::RenderWindow &window, sf::Texture &ui_texture);
-
-  private:
-    int drawBG(sf::RenderWindow &window, sf::Texture &ui_texture);
-    int drawBorder(sf::RenderWindow &window, sf::Texture &ui_texture);
-    int drawCorners(sf::RenderWindow &window, sf::Texture &ui_texture);
-
-    std::string title;
-
-    sf::IntRect location;
-
-    sf::Texture ui_texture;
-    sf::Sprite pg_sprite;  
-
-    int columns;
-    int column_rem;
-    int rows;
-    int row_rem;
+		element * head;
 };
-
-
-
-
-

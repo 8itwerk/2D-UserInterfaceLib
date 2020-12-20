@@ -1,14 +1,27 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <iostream>
+#include "page.h"
 #include "canvas.h"
-#include "canvasdefs.h"
 
 using namespace sf;
 using namespace std;
 
 int main()
 {
+	/*
+  IntRect test_location(200,200,350,350);
+  page test_page("title", test_location);
+
+  element * test_element;
+
+  test_element = new page(test_page);
+	*/
+
+  
+
+
+
   RenderWindow window(VideoMode(1280, 720), "Tactics Game UI");
 
 	// Window Background
