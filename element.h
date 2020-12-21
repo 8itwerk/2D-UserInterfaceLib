@@ -17,26 +17,25 @@ class element
 {
   public:
     element();
-    //element(const element & tocopy);
-    virtual void display() = 0;
+    virtual void draw(sf::RenderWindow &window, sf::Texture &ui_texture) = 0;
+    bool compare(const string tocomp);
+
     element * next;  // Still wrestling with the location of theis next ptr
 
   protected:
     // Make a method to access this privately 
-    //element * next;  // Still wrestling with the location of theis next ptr
 
   private:
     string name;
     int type;
     sf::IntRect location;
-
 };
 
 class text: public element
 {
   public:
     text();
-
+		draw();
 
   private:
 };

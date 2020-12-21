@@ -78,7 +78,7 @@ void canvas::update()
 	return;
 }
 
-int canvas::draw(sf::RenderWindow &window, sf::Texture &ui_texture)
+void canvas::draw(sf::RenderWindow &window, sf::Texture &ui_texture)
 {
   drawBG(window, ui_texture); 
 
@@ -86,7 +86,7 @@ int canvas::draw(sf::RenderWindow &window, sf::Texture &ui_texture)
 
   drawCorners(window, ui_texture);
 
-  return 0;
+  return;
 }
 
 int canvas::drawBG(sf::RenderWindow &window, sf:: Texture &ui_texture)
@@ -255,5 +255,3 @@ int canvas::drawCorners(sf::RenderWindow & window, sf::Texture &ui_texture)
 
   return 0;
 }
-
-void canvas::display() {}

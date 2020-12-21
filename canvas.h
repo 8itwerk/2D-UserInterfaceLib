@@ -22,8 +22,7 @@ class canvas : public element
     int changeSize(int toX, int toY);
 
     int getLocation(sf::IntRect &toAdd);
-    int draw(sf::RenderWindow &window, sf::Texture &ui_texture);
-    void display();  // switch draw! 
+    void draw(sf::RenderWindow &window, sf::Texture &ui_texture);
 
   private:
     // This can save time by not calc on the fly, but is not enforced!

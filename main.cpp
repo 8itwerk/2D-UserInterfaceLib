@@ -19,7 +19,7 @@ int main()
 	*/
 
   
-
+  page test_page;
 
 
   RenderWindow window(VideoMode(1280, 720), "Tactics Game UI");
@@ -37,6 +37,8 @@ int main()
   IntRect location(200,200,350,350);
 
   canvas test_canvas("Test Page", location);
+
+	test_page.addElement(test_canvas);
 
   // Main Loop
   while (window.isOpen()) {
@@ -58,7 +60,8 @@ int main()
 		// Draw Background
 		window.draw(window_background);
 
-    test_canvas.draw(window, ui_texture);
+    //test_canvas.display(window, ui_texture);
+		test_page.draw(window, ui_texture);
 
     // Display All
     window.display();

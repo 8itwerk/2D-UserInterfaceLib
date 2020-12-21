@@ -5,8 +5,15 @@
 
 element::element()
 {
-  next == NULL;
+	name = "none";
+  next = NULL;
 }
 
-
+bool element::compare(const string tocomp)
+{
+	if (name == tocomp)
+		return true;
+	else
+		return false;
+}
 
