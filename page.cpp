@@ -69,7 +69,7 @@ void page::draw(sf::RenderWindow &window, sf::Texture &ui_texture)
 	element * current = head;
 
 	while (current) {
-		current->display(window, ui_texture);
+		current->draw(window, ui_texture);
 		current = current->next;
 	}
 

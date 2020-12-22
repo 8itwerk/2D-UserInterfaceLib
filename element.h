@@ -31,11 +31,17 @@ class element
     sf::IntRect location;
 };
 
+struct node
+{
+  element * data;
+  node * next;
+};
+
 class text: public element
 {
   public:
     text();
-		draw();
+    void draw(sf::RenderWindow &window, sf::Texture &ui_texture);
 
   private:
 };
